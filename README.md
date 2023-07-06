@@ -11,7 +11,7 @@ name: Gh-Pages
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
   build:
