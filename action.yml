@@ -33,6 +33,9 @@ runs:
     - run: flutter config --enable-web
       shell: bash
       working-directory: ${{inputs.workingDir}}
+    - run: flutter pub get
+      shell: bash
+      working-directory: ${{inputs.workingDir}}
     - run: flutter build web --release --base-href ${{inputs.baseHref}} ${{inputs.customArgs}}
       shell: bash
       working-directory: ${{inputs.workingDir}}
