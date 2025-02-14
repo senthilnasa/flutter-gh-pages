@@ -20,34 +20,24 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: subosito/flutter-action@v2
-      - uses: bluefireteam/flutter-gh-pages@v7
+      - uses: senthilnasa/flutter-gh-pages@main
 ```
 To build a project in a folder other that the root, use the `workingDir` property
 
 ```yml
       ...
-      - uses: bluefireteam/flutter-gh-pages@v7
+      - uses: senthilnasa/flutter-gh-pages@main
         with:
           workingDir: example
 ```
 
-By default, the action will use the auto setting for web renderers, to change that you can use the `webRenderer` property.
-
-More on web renderers here: https://flutter.dev/docs/development/tools/web-renderers
-
-```yml
-      ...
-      - uses: bluefireteam/flutter-gh-pages@v7
-        with:
-          webRenderer: canvaskit
-```
 
 By default, the action will send the files to the `gh-pages` branch, which is the default used by Github Pages.
 If you need to change that, the `targetBranch` property can be used
 
 ```yml
       ...
-      - uses: bluefireteam/flutter-gh-pages@v7
+      - uses: senthilnasa/flutter-gh-pages@main
         with:
           targetBranch: my-gh-pages-branch
 ```
@@ -60,7 +50,7 @@ The parameter `baseHref` must start and end with a forward slash `"/"`.
 
 ```yml
       ...
-      - uses: bluefireteam/flutter-gh-pages@v7
+      - uses: senthilnasa/flutter-gh-pages@main
         with:
           baseHref: /my-repo/
 ```
@@ -69,7 +59,7 @@ To pass arguments to the builder with `--dart-define` the `customArgs` property 
 
 ```yml
       ...
-      - uses: bluefireteam/flutter-gh-pages@v7
+      - uses: senthilnasa/flutter-gh-pages@main
         with:
           customArgs: --dart-define="simple=example"
 ```
